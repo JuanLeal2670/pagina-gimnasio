@@ -13,6 +13,10 @@ a {
     color: black;
 }
 
+.bodyMaster {
+    overflow: hidden;
+}
+
 
 /* Ediciion de encabezado */
 
@@ -49,6 +53,7 @@ header .navBar .navBarNav .navBarItem :hover,
 .mostrar-menu :hover,
 .esconder-menu :hover {
     color: white;
+    transition: 0.8s;
 }
 
 .logo {
@@ -86,7 +91,7 @@ header .navBar .navBarNav .navBarItem :hover,
 
 /*RESPONSIVE*/
 
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 360px) {
     /*HEADER*/
     .mostrar-menu,
     .esconder-menu {
@@ -121,12 +126,50 @@ header .navBar .navBarNav .navBarItem :hover,
         right: 0;
     } 
 
-    
+    .logo h2 {
+        display: none;
+    }
+
+    .footer .grupo_1 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .footer .grupo_1 .copy {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .container-1 .clases a {
+        color: aliceblue;
+        font-size: x-large;
+        display: flex;
+        justify-content: center;
+        width: 355px;
+    }
+
+    .container-1 .clases .clases-list {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-around;
+        margin: 10px;
+        padding: 10px;
+        width: 355px;
+    }
+
+    .container-1 .clases h2 {
+        display: flex;
+        width: 355px;
+        text-align: center;
+    }
+
+    .container-1 {
+        display: grid;
+        grid-template-columns: auto;
+    }
 }
 
- 
-
-/* Ediciion de encabezado */
 
 /* Edicion de cuerpo */
 

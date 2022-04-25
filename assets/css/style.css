@@ -22,7 +22,7 @@ a {
 /*RESPONSIVE MOBILE*/
 
 @media screen and (min-width: 360px) {
-    
+
     header {
         display: flex;
         height: 100px;
@@ -128,6 +128,7 @@ a {
     .container-1 .clases .botonClases {
         text-align: center;
     }
+
     .container-1 .clases .botonClases a {
         display: inline-block;
         padding: 0.3em;
@@ -390,7 +391,7 @@ a {
         align-items: center;
         justify-content: center;
     }
-    
+
     .container-1 .clases .clases-list {
         grid-template-columns: 150px 150px;
         padding: 10px;

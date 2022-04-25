@@ -18,87 +18,38 @@ a {
 }
 
 
-/* Ediciion de encabezado */
 
-header {
-    display: flex;
-    height: 140px;
-    background-color: grey;
-    justify-content: space-between;
-    align-items: center;
-    padding: 4px;
-    position: relative;
-    top: -2px;
-}
+/*RESPONSIVE MOBILE*/
 
-header .navBar {
-    display: inline-block;
-}
-
-header .navBar .navBarNav {
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-}
-
-header .navBar .navBarNav .navBarItem {
-    display: inline-block;
-    text-transform: uppercase;
-    padding-right: 20px;
-    font-size: 20px;
-    transition: 0.4s;
-}
-
-header .navBar .navBarNav .navBarItem :hover,
-.mostrar-menu :hover,
-.esconder-menu :hover {
-    color: white;
-    transition: 0.8s;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 200px;
-    margin-right: 10px;
-
-}
-
-.navItem {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.mostrar-menu,
-.esconder-menu {
-    font-size: 35px;
-    cursor: pointer;
-    display: none;
-    transition: 0.4s;
-}
-
-.mostrar-menu {
-    order: 1;
-}
-
-#check {
-    display: none;
-}
-
-/*RESPONSIVE*/
-
-@media screen and (max-width: 360px) {
-
-    /*HEADER*/
-    .mostrar-menu,
-    .esconder-menu {
-        display: block;
+@media screen and (min-width: 360px) {
+    
+    header {
+        display: flex;
+        height: 100px;
+        background-color: grey;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4px;
+        position: relative;
     }
 
+    /*LOGO*/
+    header .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    header .logo img {
+        height: 100px;
+        margin-right: 10px;
+    }
+
+    header h2 {
+        color: black;
+        font-size: 20px;
+    }
+
+    /*MENU*/
     header .navBar {
         position: fixed;
         width: 100%;
@@ -112,8 +63,22 @@ header .navBar .navBarNav .navBarItem :hover,
         transition: 0.8s;
     }
 
-    header .navBar .navBarNav .navBarItem {
+    header .navBar .navBarNav .navBarItem .navBarLink {
         display: block;
+        padding: 15px;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+
+    header .navBar .navBarNav .navBarItem .navBarLink :hover,
+    .mostrar-menu :hover,
+    .esconder-menu :hover {
+        color: white;
+        transition: 0.8s;
+    }
+
+    .mostrar-menu {
+        order: 1;
         padding: 20px;
     }
 
@@ -123,13 +88,65 @@ header .navBar .navBarNav .navBarItem :hover,
         right: 40px;
     }
 
+    .mostrar-menu,
+    .esconder-menu {
+        font-size: 35px;
+        cursor: pointer;
+        display: block;
+        transition: 0.4s;
+    }
+
+    #check {
+        display: none;
+    }
+
     #check:checked~.navBar {
         right: 0;
     }
 
-    .logo h2 {
-        display: none;
+    /*LAS CLASES MAS EFECTIVAS Y DIVERTIDAS*/
+
+    .container-1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 10px 0;
     }
+
+    .container-1 .clases h2 {
+        display: flex;
+        text-align: center;
+    }
+
+    .container-1 .clases .clases-list {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-evenly;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .container-1 .clases .botonClases {
+        text-align: center;
+    }
+    .container-1 .clases .botonClases a {
+        display: inline-block;
+        padding: 0.3em;
+        background: #a19d9d;
+        margin: 10px;
+        border-radius: 20px;
+    }
+
+    .container-1 .clases-img {
+        text-align: center;
+    }
+
+    .container-1 .clases-img img {
+        width: 100%;
+        border-radius: 30px;
+        padding: 10px;
+    }
+
+    /*FOOTER*/
 
     .footer {
         min-height: 150px;
@@ -159,6 +176,7 @@ header .navBar .navBarNav .navBarItem :hover,
         margin-bottom: 25px;
         margin-top: 25px;
         font-size: 20px;
+        text-align: center;
     }
 
     .footer .grupo_1 .box nav {
@@ -185,48 +203,13 @@ header .navBar .navBarNav .navBarItem :hover,
         flex-direction: column-reverse;
     }
 
-    .container-1 {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    .container-1 .clases {
-        background-color: rgb(22, 22, 163);
-        color: aliceblue;
-    }
-
-    .container-1 .clases a {
-        color: aliceblue;
-        font-size: x-large;
-        display: flex;
-        justify-content: center;
-        width: 355px;
-    }
-
-    .container-1 .clases .clases-list {
-        display: grid;
-        grid-template-columns: auto auto;
-        justify-content: space-around;
-        margin: 10px;
-        padding: 10px;
-        width: 355px;
-    }
-
-    .container-1 .clases h2 {
-        display: flex;
-        width: 355px;
-        text-align: center;
-    }
+    /*PAGINA TIENDA*/
 
     .box-prendas {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr;
         justify-content: center;
         align-items: stretch;
-    }
-
-    .borderRounded {
-        border-radius: 10px;
     }
 
     .cardProduct {
@@ -238,12 +221,19 @@ header .navBar .navBarNav .navBarItem :hover,
         margin: 5px;
     }
 
+    .borderRounded {
+        border-radius: 10px;
+    }
+
     .cardProduct__image {
         width: 100%;
     }
 
     .cardProduct__description {
-        padding: 10px;
+        padding: 15px;
+        border-color: rgb(168, 165, 165);
+        border-style: solid;
+        border-width: 1px;
     }
 
     .cardProduct__description__price {
@@ -258,7 +248,7 @@ header .navBar .navBarNav .navBarItem :hover,
     }
 
     .cardProduct__description__action {
-        background-color: rgb(80, 135, 238);
+        background-color: gray;
         display: inline-block;
         width: 40%;
         padding: 10px;
@@ -266,148 +256,153 @@ header .navBar .navBarNav .navBarItem :hover,
         font-weight: bold;
         color: white;
         text-align: center;
-        border-radius: 50px;
+        border-radius: 20px;
     }
 
 
-}
+    /*CURSOS*/
 
-@media screen and (min-width: 361px) {
-    header {
-        display: flex;
-        height: 140px;
-        background-color: grey;
-        justify-content: space-between;
-        align-items: center;
-        padding: 4px;
+    .fondoCursos .fondoFachada {
         position: relative;
-        top: -2px;
     }
 
-    header .navBar {
-        display: inline-block;
-    }
-
-    header .navBar .navBarNav {
-        display: inline-block;
-        justify-content: center;
-        align-items: center;
-    }
-
-    header .navBar .navBarNav .navBarItem {
-        display: inline-block;
-        text-transform: uppercase;
-        padding-right: 20px;
-        font-size: 20px;
-        transition: 0.4s;
-    }
-
-    header .navBar .navBarNav .navBarItem :hover,
-    .mostrar-menu :hover,
-    .esconder-menu :hover {
-        color: white;
-        transition: 0.8s;
-    }
-
-    .logo {
-        display: flex;
-        align-items: center;
-    }
-
-    .logo img {
-        height: 200px;
-        margin-right: 10px;
-
-    }
-
-    .navItem {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .mostrar-menu,
-    .esconder-menu {
-        font-size: 35px;
-        cursor: pointer;
-        display: none;
-        transition: 0.4s;
-    }
-
-    .mostrar-menu {
-        order: 1;
-    }
-
-    #check {
-        display: none;
-    }
-
-    .container img {
+    .fondoCursos .fondoFachada img {
         width: 100%;
     }
 
-    .padre .title-one {
-        color: rgb(12, 8, 2);
-        font-size: 50px;
-        letter-spacing: 2px;
-        font-weight: 600;
-        text-transform: uppercase;
-        margin-top: 15px;
-        text-align: center;
-    }
-
-    .padre .paragraph {
-        text-align: center;
-        align-items: center;
-        margin: 30px;
-        flex-direction: column;
-    }
-
-    .container-1 {
+    .fondoCentro {
         display: grid;
-        grid-template-columns: auto auto;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: -120px;
     }
 
-    .container-1 .clases {
-        background-color: rgb(22, 22, 163);
-        color: aliceblue;
+    .fondoCentro .fondoTitulo {
+        display: grid;
+        justify-content: center;
     }
+}
+
+/*RESPONSIVE TABLET*/
+
+@media screen and (min-width: 760px) {
+
+    /*LAS CLASES MAS EFECTIVAS Y DIVERTIDAS*/
 
     .container-1 .clases h2 {
         display: flex;
         justify-content: center;
-        align-items: center;
     }
 
     .container-1 .clases .clases-list {
         display: grid;
-        grid-template-columns: auto auto;
-        justify-content: space-around;
         margin: 10px;
+        grid-template-columns: 150px 150px;
         padding: 10px;
+        justify-content: center;
+        grid-column-gap: 75px;
     }
 
     .container-1 .clases .clases-list .clases-list-item {
-        margin: 5px;
+        border: 1px solid black;
     }
 
-    .container-1 .clases a {
-        color: aliceblue;
-        font-size: x-large;
+    .container-1 .clases .botonClases {
+        text-align: center;
+    }
+
+    .container-1 .clases .botonClases a {
+        display: inline-block;
+        padding: 1rem;
+        background: #a19d9d;
+        margin: 10px;
+        border-radius: 20px;
+        font-size: 20px;
+    }
+
+    /*FOOTER*/
+
+    .footer .grupo_1 .box nav {
+        text-align: center;
+    }
+
+    .footer .grupo_1 .footer_rrss {
+        text-align: center;
+    }
+
+    .footer .grupo_1 .footer_rrss .fotter_rrss_orden {
+        display: inline-block;
+        margin-bottom: 3px;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .footer .grupo_1 .copy {
         display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    /*TIENDA*/
+
+    .box-prendas {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    /*CURSOS*/
+
+    .fondoCentro {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: -220px;
+    }
+}
+
+/*RESPONSIVE DESKTOP*/
+
+@media screen and (min-width: 1200px) {
+
+    /*HEADER*/
+
+
+
+    /*LAS CLASES MAS EFECTIVAS Y DIVERTIDAS*/
+
+    .container-1 {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 10rem 0;
+        gap: 2rem;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .container-1 .clases {
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
     }
-
-    .container-1 .clases-img {
-        display: flex;
+    
+    .container-1 .clases .clases-list {
+        grid-template-columns: 150px 150px;
+        padding: 10px;
         justify-content: center;
-
+        grid-column-gap: 0px;
     }
 
+    .container-1 .clases .clases-list .clases-list-item {
+        border: 0px
+    }
 
-
-
-    /* Ediciion de pie de pagina */
+    /*FOOTER*/
 
     .footer {
         min-height: 150px;
@@ -419,18 +414,17 @@ header .navBar .navBarNav .navBarItem :hover,
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 45px;
+        grid-gap: 30px;
     }
 
     .footer .grupo_1 .footer_logo {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: end;
     }
 
     .footer_logo img {
         width: 200px;
-
     }
 
     .footer .grupo_1 .box h4 {
@@ -438,18 +432,23 @@ header .navBar .navBarNav .navBarItem :hover,
         margin-bottom: 25px;
         margin-top: 25px;
         font-size: 20px;
+        text-align: initial;
+        padding-left: 85px;
     }
 
     .footer .grupo_1 .box nav {
         color: white;
         margin-bottom: 10px;
+        text-align: inherit;
     }
 
-    .footer_rrss img {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 30px;
+    .footer .grupo_1 .box nav ul {
+        padding-left: 37px;
+    }
+
+    .footer .grupo_1 .footer_rrss {
+        text-align: inherit;
+        margin-bottom: -5px;
     }
 
     .footer_rrss .fotter_rrss_orden {
@@ -465,75 +464,16 @@ header .navBar .navBarNav .navBarItem :hover,
         grid-column: 3;
     }
 
-
-
-    /*Edicion main pagina tienda*/
-
-    .tienda {
-        display: grid;
-        grid-template-columns: 10% auto;
-        overflow: auto;
-
-    }
-
-    .tienda .menu {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .tienda .menu div {
-        border: 1px solid gray;
-    }
+    /*TIENDA*/
 
     .box-prendas {
-        display: grid;
-        grid-template-columns: auto auto;
-        justify-content: center;
-        align-items: stretch;
+        grid-template-columns: auto auto auto;
     }
 
-    .borderRounded {
-        border-radius: 10px;
-    }
+    /*CURSOS*/
 
-    .cardProduct {
-        width: 100%;
-        max-width: 355px;
-        border-color: rgb(168, 165, 165);
-        border-style: solid;
-        border-width: 3px;
-        margin: 5px;
-    }
-
-    .cardProduct__image {
-        width: 100%;
-    }
-
-    .cardProduct__description {
-        padding: 10px;
-    }
-
-    .cardProduct__description__price {
-        margin-top: 10px;
-    }
-
-    .cardProduct__description__text {
-        margin-top: 15px;
-        margin-bottom: 20px;
-        text-align: justify;
-        line-height: 25px;
-    }
-
-    .cardProduct__description__action {
-        background-color: rgb(80, 135, 238);
-        display: inline-block;
-        width: 40%;
-        padding: 10px;
-        text-decoration: none;
-        font-weight: bold;
-        color: white;
-        text-align: center;
-        border-radius: 50px;
+    .fondoCentro {
+        top: -380px;
     }
 
 }

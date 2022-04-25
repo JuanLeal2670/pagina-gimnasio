@@ -12,196 +12,180 @@
 </head>
 
 <body>
-    <header>
-        <a class="logo" href="./../index.html"><img src="./../assets/img/logo.png" alt="Gimnasio Equilibrium">
-            <h2 class="Gimnasio Equilibrium">GIMNASIO EQUILIBRIUM</h2>
-        </a>
-        <input type="checkbox" id="check">
-        <label for="check" class="mostrar-menu">
-            &#8801
-        </label>
-        <nav class="navBar">
-            <ul class="navBarNav">
-                <li class="navBarItem"><a class="navBarLink" href="./../index.html">Inicio</a></li>
-                <li class="navBarItem"><a class="navBarLink" href="./tienda.html">Tienda</a></li>
-                <li class="navBarItem"><a class="navBarLink" href="#">Cursos</a></li>
-                <li class="navBarItem"><a class="navBarLink" href="./contacto.html">Contacto</a></li>
-                <li class="navBarItem"><a class="navBarLink" href="./horarios.html">Horarios</a></li>
-            </ul>
-            <label for="check" class="esconder-menu">
-                &#215
+    <div class="bodyMaster">
+        <header>
+            <a class="logo" href="./../index.html"><img src="./../assets/img/logo.png" alt="Gimnasio Equilibrium">
+                <h2 class="Gimnasio Equilibrium">GIMNASIO EQUILIBRIUM</h2>
+            </a>
+            <input type="checkbox" id="check">
+            <label for="check" class="mostrar-menu">
+                &#8801
             </label>
-        </nav>
-    </header>
+            <nav class="navBar">
+                <ul class="navBarNav">
+                    <li class="navBarItem"><a class="navBarLink" href="./../index.html">Inicio</a></li>
+                    <li class="navBarItem"><a class="navBarLink" href="./tienda.html">Tienda</a></li>
+                    <li class="navBarItem"><a class="navBarLink" href="#">Cursos</a></li>
+                    <li class="navBarItem"><a class="navBarLink" href="./contacto.html">Contacto</a></li>
+                    <li class="navBarItem"><a class="navBarLink" href="./horarios.html">Horarios</a></li>
+                </ul>
+                <label for="check" class="esconder-menu">
+                    &#215
+                </label>
+            </nav>
+        </header>
 
-    <div>
-        <div style="position: relative;">
-            <img src="./../assets/img/11-fachada gym.jpg" style="width: 100%;" alt="fachada gym">
-        </div>
-        <div style="display: grid;justify-content: center;align-items: center;position: relative;top: -340px;">
-            <div style="display: grid; justify-content: center;">
-                <h1>Cursos</h1>
+        <div class="fondoCursos">
+            <div class="fondoFachada">
+                <img src="./../assets/img/11-fachada gym.jpg"  alt="fachada gym">
             </div>
-            <div><button type="button" class="btn btn-secondary">Registrate a un curso</button></div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <img src="./../assets/img/7-instructor fitness.jpg" alt="Instructor Fitness">
-            </div>
-            <div class="col">
-                <div>
-                    <h2>Instructor Fitness</h2>
+        </div class="fondoCentro">
+            <div class="fondoCentro">
+                <div class="fondoTitulo">
+                    <h1>Cursos</h1>
                 </div>
-                <div>
-                    <p>Martes 16:00 hs</p>
+                <div><button type="button" class="btn btn-secondary">Registrate a un curso</button></div>
+            </div>
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="./../assets/img/7-instructor fitness.jpg" alt="Instructor">
+
+                            <div class="card-body">
+                                <h2>Instructor Fitness</h2>
+                                <p class="card-text">El instructor de fitness se encarga de dirigir e instruir a las
+                                    personas sobre los diferentes ejercicios y actividades de acondicionamiento físico.
+                                </p>
+                                <p>Martes 16:00 hs</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">+INFO</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="./../assets/img/8-personal trainer.jpg" alt="Personal Trainter">
+
+                            <div class="card-body">
+                                <h2>Personal Trainer</h2>
+                                <p class="card-text">Aprenderás a armar planificaciones de entrenamiento
+                                    profesionales
+                                    para aplicar en objetivos concretos propios o para otros a quienes entrenes</p>
+                                <p>Miercoles 18:00 hs</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">+INFO</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="./../assets/img/9-musculacion.jpg" alt="Musculacion">
+
+                            <div class="card-body">
+                                <h2>Musculacion</h2>
+                                <p class="card-text">Es una alternativa de actividad física basada generalmente en ejercicio físico de media a alta intensidad.</p>
+                                <p>Jueves 19:00 hs</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">+INFO</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="./../assets/img/10-suplementacion deportiva.jpg" alt="Suplementacion deportiva">
+
+                            <div class="card-body">
+                                <h2>Suplementacion deportiva</h2>
+                                <p class="card-text">Estudia suplementacion deportiva y logra optimizar la selección
+                                    de
+                                    los componentes de una dieta a la hora de buscar el máximo rendimiento físico.
+                                </p>
+                                <p>Viernes 20:00 hs</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">+INFO</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <button type="button" class="btn btn-secondary">+Info</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <img src="./../assets/img/8-personal trainer.jpg" alt="Personal Trainer">
-            </div>
-            <div class="col">
-                <div>
-                    <h2>Personal Trainer</h2>
-                </div>
-                <div>
-                    <p>Miercoles 18:00 hs</p>
-                </div>
-                <button type="button" class="btn btn-secondary">+Info</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <img src="./../assets/img/9-musculacion.jpg" alt="Musculacion">
-            </div>
-            <div class="col">
-                <div>
-                    <h2>Musculacion</h2>
-                </div>
-                <div>
-                    <p>Jueves 19:00 hs</p>
-                </div>
-                <button type="button" class="btn btn-secondary">+Info</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <img src="./../assets/img/10-suplementacion deportiva.jpg" alt="Suplementacion deportiva">
-            </div>
-            <div class="col">
-                <div>
-                    <h2>Suplementacion deportiva</h2>
-                </div>
-                <div>
-                    <p>Viernes 20:00 hs</p>
-                </div>
-                <button type="button" class="btn btn-secondary">+Info</button>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-    <!--<main>
-        <h1>Cursos</h1>
-        <section>
-            <h2>Instructor Fitness</h2>
-            <p>Martes 16:00 hs</p>
-            <img src="./../assets/img/7-instructor fitness.jpg" alt="Instructor Fitness">
-        </section>
-
-        <section>
-            <h2>Personal Trainer</h2>
-            <p>Miercoles 18:00 hs</p>
-            <img src="./../assets/img/8-personal trainer.jpg" alt="Personal Trainer">
-        </section>
-
-        <Section>
-            <h2>Musculacion</h2>
-            <p>Jueves 19:00 hs</p>
-            <img src="./../assets/img/9-musculacion.jpg" alt="Musculacion">
-        </Section>
-
-        <Section>
-            <h2>Suplementacion deportiva</h2>
-            <p>Viernes 20:00 hs</p>
-            <img src="./../assets/img/10-suplementacion deportiva.jpg" alt="Suplementacion deportiva">
-        </Section>
-    </main>-->
-
-    <footer class="footer">
-        <div class="grupo_1">
-            <div class="footer_logo">
-                <img src="./../assets/img/logo.png" alt="Gimnasio Equilibrium">
-            </div>
-
-            <div class="box">
-                <h4>Cursos</h4>
-                <nav>
-                    <ul>
-                        <li><a href="pages/cursos.html">Instructor Fitness</a></li>
-                        <li><a href="pages/cursos.html">Personal Trainer</a></li>
-                        <li><a href="pages/cursos.html">Musculacion</a></li>
-                        <li><a href="pages/cursos.html">Suplementación deportiva</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-            <div class="box">
-                <h4>Tienda</h4>
-                <nav>
-                    <ul>
-                        <li><a href="pages/tienda.html">Ropa deportiva hombre</a></li>
-                        <li><a href="pages/tienda.html">Ropa deportiva mujer</a></li>
-                        <li><a href="pages/tienda.html">Ropa deportiva niños</a></li>
-                        <li><a href="pages/tienda.html">Suplementos deportivos</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-            <ul class="footer_rrss">
-                <li class="fotter_rrss_orden">
-                    <a href="https://es-la.facebook.com/" target="_blank">
-                        <img src="./../assets/img/facebook-logo-0.png" alt="Facebook Gimnasio Equilibrium">
-                    </a>
-                </li>
-                <li class="fotter_rrss_orden">
-                    <a href="https://www.youtube.com/" target="_blank">
-                        <img src="./../assets/img/youtube-logo-7-2.png" alt="Youtube Gimnasio Equilibrium">
-                    </a>
-                </li>
-                <li class="fotter_rrss_orden">
-                    <a href="https://www.instagram.com/" target="_blank">
-                        <img src="./../assets/img/instagram-logo-13.png" alt="Instagram Gimnasio Equilibrium">
-                    </a>
-                </li>
-            </ul>
-
-            <div class="copy">
-                <small>&copy; 2022 <b>Juan Leal</b> - Todos los Derechos Reservados</small>
             </div>
         </div>
-    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+        <footer class="footer">
+            <div class="grupo_1">
+                <div class="footer_logo">
+                    <img src="./../assets/img/logo.png" alt="Gimnasio Equilibrium">
+                </div>
+
+                <div class="box">
+                    <h4>Cursos</h4>
+                    <nav>
+                        <ul>
+                            <li><a href="pages/cursos.html">Instructor Fitness</a></li>
+                            <li><a href="pages/cursos.html">Personal Trainer</a></li>
+                            <li><a href="pages/cursos.html">Musculacion</a></li>
+                            <li><a href="pages/cursos.html">Suplementación deportiva</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="box">
+                    <h4>Tienda</h4>
+                    <nav>
+                        <ul>
+                            <li><a href="pages/tienda.html">Ropa deportiva hombre</a></li>
+                            <li><a href="pages/tienda.html">Ropa deportiva mujer</a></li>
+                            <li><a href="pages/tienda.html">Ropa deportiva niños</a></li>
+                            <li><a href="pages/tienda.html">Suplementos deportivos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <ul class="footer_rrss">
+                    <li class="fotter_rrss_orden">
+                        <a href="https://es-la.facebook.com/" target="_blank">
+                            <img src="./../assets/img/facebook-logo-0.png" alt="Facebook Gimnasio Equilibrium">
+                        </a>
+                    </li>
+                    <li class="fotter_rrss_orden">
+                        <a href="https://www.youtube.com/" target="_blank">
+                            <img src="./../assets/img/youtube-logo-7-2.png" alt="Youtube Gimnasio Equilibrium">
+                        </a>
+                    </li>
+                    <li class="fotter_rrss_orden">
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <img src="./../assets/img/instagram-logo-13.png" alt="Instagram Gimnasio Equilibrium">
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="copy">
+                    <small>&copy; 2022 <b>Juan Leal</b> - Todos los Derechos Reservados</small>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>

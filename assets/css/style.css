@@ -139,6 +139,10 @@ a {
 
     .container-1 .clases-img {
         text-align: center;
+
+        animation: backInRight;
+        animation-duration: 3s;
+        animation-delay: 2s;
     }
 
     .container-1 .clases-img img {

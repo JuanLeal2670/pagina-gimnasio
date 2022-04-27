@@ -1,0 +1,535 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1&display=swap");
+
+* {
+    font-family: 'M PLUS 1', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+/*VARIABLES*/
+
+$cool-background-button: #afafaf;
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.bodyMaster {
+    overflow: hidden;
+}
+
+/*RESPONSIVE MOBILE*/
+@media screen and (min-width: 360px) {
+    header {
+        display: flex;
+        height: 100px;
+        background-color: grey;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4px;
+        position: relative;
+
+        /*LOGO*/
+
+        .logo {
+            display: flex;
+            align-items: center;
+
+            img {
+                height: 100px;
+                margin-right: 10px;
+            }
+
+            h2 {
+                color: black;
+                font-size: 20px;
+            }
+        }
+
+        #check {
+            display: none;
+        }
+
+        #check:checked~.navBar {
+            right: 0;
+        }
+
+        /*MENU*/
+        .navBar {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: grey;
+            right: -100%;
+            top: 0;
+            text-align: center;
+            padding: 100px 0px;
+            z-index: 100;
+            transition: 0.8s;
+        }
+
+        .navBarNav .navBarItem .navBarLink {
+            display: block;
+            padding: 15px;
+            font-size: 20px;
+            text-transform: uppercase;
+
+            &:hover {
+                color: white;
+                transition: 0.8s;
+            }
+        }
+
+        .esconder-menu {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            font-size: 35px;
+            cursor: pointer;
+            display: block;
+            transition: 0.4s;
+
+            &:hover {
+                color: white;
+                transition: 0.8s;
+            }
+        }
+
+        .mostrar-menu {
+            order: 1;
+            padding: 20px;
+            font-size: 35px;
+            cursor: pointer;
+            display: block;
+            transition: 0.4s;
+
+            &:hover {
+                color: white;
+                transition: 0.8s;
+            }
+        }
+
+    }
+
+    /*LAS CLASES MAS EFECTIVAS Y DIVERTIDAS*/
+    .container-1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 10px 0;
+
+        .clases {
+            background-color: #f9d2ad;
+            border-radius: 10px;
+
+            h2 {
+                display: flex;
+                text-align: center;
+            }
+
+            .clases-list {
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-evenly;
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .botonClases {
+                text-align: center;
+
+                a {
+                    display: inline-block;
+                    padding: 0.3em;
+                    background: $cool-background-button;
+                    ;
+                    margin: 10px;
+                    border-radius: 20px;
+
+                    &:hover {
+                        color: white;
+                        transition: 0.8s;
+                    }
+                }
+            }
+        }
+
+        .clases-img {
+            text-align: center;
+            animation: backInRight;
+            animation-duration: 3s;
+            animation-delay: 2s;
+
+            img {
+                width: 100%;
+                border-radius: 30px;
+                padding: 10px;
+            }
+        }
+    }
+
+    /*FOOTER*/
+    .footer {
+        min-height: 150px;
+        background-color: gray;
+        padding: 10px;
+
+        .grupo_1 {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+
+            .footer_logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 200px;
+                }
+            }
+
+            h4 {
+                color: white;
+                margin-bottom: 25px;
+                margin-top: 25px;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            nav {
+                color: white;
+                margin-bottom: 10px;
+            }
+
+            .copy {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+        }
+
+        .footer_rrss .fotter_rrss_orden {
+            display: inline-block;
+            margin-bottom: 3px;
+            padding: 5px;
+            text-align: center;
+
+            img {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+            }
+        }
+    }
+
+    /*PAGINA TIENDA*/
+    .box-prendas {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: stretch;
+
+        .cardProduct {
+            width: 100%;
+            max-width: 355px;
+            border-color: gray;
+            border-style: solid;
+            border-width: 3px;
+            margin: 5px;
+
+            .borderRounded {
+                border-radius: 10px;
+            }
+
+            .cardProduct__image {
+                width: 100%;
+            }
+
+            .cardProduct__description {
+                padding: 15px;
+                border-color: gray;
+                border-style: solid;
+                border-width: 1px;
+            }
+
+            .cardProduct__description__price {
+                margin-top: 10px;
+            }
+
+            .cardProduct__description__text {
+                margin-top: 15px;
+                margin-bottom: 20px;
+                text-align: justify;
+                line-height: 25px;
+            }
+
+            .cardProduct__description__action {
+                background-color: $cool-background-button;
+                display: inline-block;
+                width: 40%;
+                padding: 10px;
+                text-decoration: none;
+                font-weight: bold;
+                color: white;
+                text-align: center;
+                border-radius: 20px;
+            }
+        }
+    }
+
+    /*CURSOS*/
+    .fondoCursos .fondoFachada {
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .fondoCentro {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: -120px;
+
+        .fondoTitulo {
+            display: grid;
+            justify-content: center;
+        }
+    }
+
+}
+
+/*RESPONSIVE TABLET*/
+@media screen and (min-width: 760px) {
+
+    /*LAS CLASES MAS EFECTIVAS Y DIVERTIDAS*/
+
+    .container-1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 10px 0;
+
+        .clases {
+            background-color: #f9d2ad;
+            border-radius: 10px;
+            margin: 10px;
+
+            h2 {
+                display: flex;
+                justify-content: center;
+            }
+
+            .clases-list {
+                display: grid;
+                margin: 10px;
+                grid-template-columns: 150px 150px;
+                padding: 10px;
+                justify-content: center;
+                grid-column-gap: 75px;
+
+                .clases-list-item {
+                    border: 1px solid black;
+                }
+            }
+
+            .botonClases {
+                text-align: center;
+            }
+
+            a {
+                display: inline-block;
+                padding: 1rem;
+                background: $cool-background-button;
+                margin: 10px;
+                border-radius: 20px;
+                font-size: 20px;
+
+                &:hover {
+                    color: white;
+                    transition: 0.8s;
+                }
+            }
+        }
+    }
+
+    /*FOOTER*/
+
+    .footer {
+        min-height: 150px;
+        background-color: grey;
+        padding: 10px;
+
+        .grupo_1 {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+
+            .footer_logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 200px;
+                }
+            }
+
+            h4 {
+                color: white;
+                margin-bottom: 25px;
+                margin-top: 25px;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            .copy {
+                display: flex;
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .footer_rrss {
+                text-align: center;
+
+                .fotter_rrss_orden {
+                    display: inline-block;
+                    margin-bottom: 3px;
+                    padding: 5px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    /*TIENDA*/
+    .box-prendas {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    /*CURSOS*/
+    .fondoCentro {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: -220px;
+    }
+}
+
+/*RESPONSIVE DESKTOP*/
+@media screen and (min-width: 1200px) {
+
+    /*HEADER*/
+    /*LAS CLASES MAS EFECTIVAS Y DIVERTIDAS*/
+    .container-1 {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 10rem 0;
+        gap: 2rem;
+        width: 90%;
+        margin: 0 auto;
+
+        .clases {
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .clases-list {
+                grid-template-columns: 150px 150px;
+                padding: 10px;
+                justify-content: center;
+                grid-column-gap: 0px;
+
+                .clases-list-item {
+                    border: 0px;
+                }
+            }
+        }
+    }
+
+    /*FOOTER*/
+    .footer {
+        min-height: 150px;
+        background-color: grey;
+        padding: 10px;
+
+        .grupo_1 {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 30px;
+
+            .footer_logo {
+                display: flex;
+                justify-content: center;
+                align-items: end;
+
+                img {
+                    width: 200px;
+                }
+            }
+
+            h4 {
+                color: white;
+                margin-bottom: 25px;
+                margin-top: 25px;
+                font-size: 20px;
+                text-align: initial;
+                padding-left: 85px;
+            }
+
+            nav {
+                color: white;
+                margin-bottom: 10px;
+                text-align: inherit;
+
+                ul {
+                    padding-left: 37px;
+                }
+            }
+
+            .copy {
+                display: flex;
+                flex-direction: column-reverse;
+                grid-column: 3;
+            }
+
+            .footer_rrss {
+                text-align: inherit;
+                margin-bottom: -5px;
+
+                .fotter_rrss_orden {
+                    display: inline-block;
+                    margin-bottom: 3px;
+                    padding: 5px;
+                    text-align: center;
+                }
+            }
+
+        }
+    }
+
+    /*TIENDA*/
+    .box-prendas {
+        grid-template-columns: auto auto auto;
+    }
+
+    /*CURSOS*/
+    .fondoCentro {
+        top: -380px;
+    }
+}

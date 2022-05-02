@@ -8,6 +8,23 @@
     list-style: none;
 }
 
+/*MIXIN*/
+
+@mixin fontSize ($size, $weight) {
+    font-size: $size;
+    font-weight: $weight;
+}
+
+/*MAPS*/
+
+$estilos: (
+    color-borde: gray,
+    estilo-borde: solid,
+    ancho: 100%,
+);
+
+
+
 /*VARIABLES*/
 
 $cool-background-button: #afafaf;
@@ -43,9 +60,14 @@ a {
                 margin-right: 10px;
             }
 
-            h2 {
+            h1 {
                 color: black;
                 font-size: 20px;
+
+                &:hover {
+                    color: white;
+                    transition: 0.8s;
+                }
             }
         }
 
@@ -114,6 +136,37 @@ a {
 
     }
 
+    /*BOTONES*/
+    .boton {
+        text-align: center;
+
+        a {
+            display: inline-block;
+            padding: 0.8em;
+            background: $cool-background-button;
+            margin: 10px;
+            border-radius: 20px;
+
+            &:hover {
+                color: white;
+                transition: 0.8s;
+            }
+        }
+
+        &:hover {
+            transition: 0.8s;
+            background-color: $cool-background-button;
+            border-radius: 20px;
+        }
+    }
+
+    .botonPagina {
+        @extend .boton;
+        display: inline-block;
+    }
+
+    /*BOTONES*/
+
     /*LAS CLASES MAS EFECTIVAS Y DIVERTIDAS*/
     .container-1 {
         display: grid;
@@ -135,24 +188,6 @@ a {
                 justify-content: space-evenly;
                 margin: 10px;
                 padding: 10px;
-            }
-
-            .botonClases {
-                text-align: center;
-
-                a {
-                    display: inline-block;
-                    padding: 0.3em;
-                    background: $cool-background-button;
-                    ;
-                    margin: 10px;
-                    border-radius: 20px;
-
-                    &:hover {
-                        color: white;
-                        transition: 0.8s;
-                    }
-                }
             }
         }
 
@@ -199,9 +234,11 @@ a {
                 text-align: center;
             }
 
-            nav {
-                color: white;
-                margin-bottom: 10px;
+            nav a {
+                &:hover {
+                    color: white;
+                    transition: 0.8s;
+                }
             }
 
             .copy {
@@ -233,10 +270,10 @@ a {
         align-items: stretch;
 
         .cardProduct {
-            width: 100%;
+            border-color: map-get($map: $estilos, $key:color-borde);
+            border-style: map-get($map: $estilos, $key:estilo-borde);
+            width: map-get($map: $estilos, $key:ancho);
             max-width: 355px;
-            border-color: gray;
-            border-style: solid;
             border-width: 3px;
             margin: 5px;
 
@@ -264,18 +301,7 @@ a {
                 margin-bottom: 20px;
                 text-align: justify;
                 line-height: 25px;
-            }
-
-            .cardProduct__description__action {
-                background-color: $cool-background-button;
-                display: inline-block;
-                width: 40%;
-                padding: 10px;
-                text-decoration: none;
-                font-weight: bold;
-                color: white;
-                text-align: center;
-                border-radius: 20px;
+                @include fontSize(1.1rem,100 )
             }
         }
     }
@@ -334,24 +360,6 @@ a {
 
                 .clases-list-item {
                     border: 1px solid black;
-                }
-            }
-
-            .botonClases {
-                text-align: center;
-            }
-
-            a {
-                display: inline-block;
-                padding: 1rem;
-                background: $cool-background-button;
-                margin: 10px;
-                border-radius: 20px;
-                font-size: 20px;
-
-                &:hover {
-                    color: white;
-                    transition: 0.8s;
                 }
             }
         }

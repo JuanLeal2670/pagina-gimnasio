@@ -42,43 +42,104 @@
 
         <main>
             <section>
-                <h1>Contacto</h1>
-                <p>Dejenos cualquier consulta y a la brevedad nos comunicaremos con usted</p>
+                <div class="fondoCursos">
+                    <div class="fondoFachada">
+                        <img src="./../assets/img/1-gimnasio home.jpg" alt="fachada gym">
+                    </div>
+                </div>
             </section>
+
+            <h1 style="text-align: center">Contacto</h1>
+            <p style="text-align: center">Dejenos cualquier consulta y a la brevedad nos comunicaremos con usted</p>
+
+
+            <div class="row g-5" style="margin: 0;">
+                <div class="col-md-5 col-lg-4 order-md-last">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-secundary">Nuestros Locales</span>
+                    </h4>
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Equilibrium Centro</h6>
+                                <small class="text-muted">
+                                    Soriano 1026 al 1032
+                                    Tel: 29081514
+                                </small>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Equilibrium Cordón</h6>
+                                <small class="text-muted">
+                                    José E. Rodó 2087
+                                    Tel: 24067496
+                                </small>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Equilibrium Nuevo Centro</h6>
+                                <small class="text-muted">
+                                    Av. Dr. Luis Alberto de Herrera 3566
+                                    Tel: 2208 9462
+                                </small>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-7 col-lg-8">
+                    <form class="needs-validation" novalidate="">
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label for="firstName" class="form-label">Nombres</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="Cosme">
+                                <div class="invalid-feedback">
+                                    Se requiere un nombre valido, hermosa criatura.
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="lastName" class="form-label">Apellidos</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Fulanito">
+                                <div class="invalid-feedback">
+                                    Se requiere un apellido valido, hermosa criatura.
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email"
+                                    placeholder="claroejemplo@example.com">
+                                <div class="invalid-feedback">
+                                    Por favor, ingresa un correo valido, entendes?
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Deposita tu consulta, ser
+                                    extremadamente hermoso/a</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <div class="boton">
+                            <a href="#">Enviar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
             <div>
-                <form action="" method="post">
-                    <div>
-                        <label for="name">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Pepito" required>
-                    </div>
-
-                    <div>
-                        <label for="mail">Correo</label>
-                        <input type="mail" id="mail" name="mail" placeholder="elmessias@hotmail.com" required>
-                    </div>
-
-                    <div>
-                        <label for="mensaje">Mensaje</label>
-                        <textarea name="mensaje" id="mensaje" cols="30" rows="10"
-                            placeholder="Deje su mensaje humano extremadamente sensual" required></textarea>
-                    </div>
-
-                    <div>
-                        <label for="newsletter">¿Quieres recibir novedades en tu correo?</label>
-                        <input type="checkbox" name="newsletter" id="newsletter" value="aceptar">
-                    </div>
-
-                    <div>
-                        <input type="submit">
-                    </div>
-
-
-                </form>
-
-                <h3>Ubicación</h3>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113628.32171157845!2d-109.36324700610128!3d-27.12843023161909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9947f1b353dbf5b3%3A0x7d0c6060d9c62ef6!2z0JzQvtCw0Zc!5e0!3m2!1ses-419!2suy!4v1647704585670!5m2!1ses-419!2suy"
-                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <h3 style="padding: 20px;">Ubicación</h3>
+                <div style="padding: 20px; overflow: scroll;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113628.32171157845!2d-109.36324700610128!3d-27.12843023161909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9947f1b353dbf5b3%3A0x7d0c6060d9c62ef6!2z0JzQvtCw0Zc!5e0!3m2!1ses-419!2suy!4v1647704585670!5m2!1ses-419!2suy"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
         </main>
 

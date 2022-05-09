@@ -17,200 +17,252 @@ a {
   overflow: hidden; }
 
 /*RESPONSIVE MOBILE*/
-@media screen and (min-width: 360px) {
-  header {
+header {
+  display: flex;
+  height: 100px;
+  background-color: grey;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px;
+  position: relative;
+  /*LOGO*/
+  /*MENU*/ }
+  header .logo {
     display: flex;
-    height: 100px;
-    background-color: grey;
-    justify-content: space-between;
-    align-items: center;
-    padding: 4px;
-    position: relative;
-    /*LOGO*/
-    /*MENU*/ }
-    header .logo {
-      display: flex;
-      align-items: center; }
-      header .logo img {
-        height: 100px;
-        margin-right: 10px; }
-      header .logo h1 {
-        color: black;
-        font-size: 20px; }
-        header .logo h1:hover {
-          color: white;
-          transition: 0.8s; }
-    header #check {
-      display: none; }
-    header #check:checked ~ .navBar {
-      right: 0; }
-    header .navBar {
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background: grey;
-      right: -100%;
-      top: 0;
-      text-align: center;
-      padding: 100px 0px;
-      z-index: 100;
+    align-items: center; }
+    header .logo img {
+      height: 100px;
+      margin-right: 10px; }
+    header .logo h1 {
+      color: black;
+      font-size: 20px; }
+      header .logo h1:hover {
+        color: white;
+        transition: 0.8s; }
+  header #check {
+    display: none; }
+  header #check:checked ~ .navBar {
+    right: 0; }
+  header .navBar {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: grey;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 100px 0px;
+    z-index: 100;
+    transition: 0.8s; }
+  header .navBarNav .navBarItem .navBarLink {
+    display: block;
+    padding: 15px;
+    font-size: 20px;
+    text-transform: uppercase; }
+    header .navBarNav .navBarItem .navBarLink:hover {
+      color: white;
       transition: 0.8s; }
-    header .navBarNav .navBarItem .navBarLink {
-      display: block;
-      padding: 15px;
-      font-size: 20px;
-      text-transform: uppercase; }
-      header .navBarNav .navBarItem .navBarLink:hover {
-        color: white;
-        transition: 0.8s; }
-    header .esconder-menu {
-      position: absolute;
-      top: 40px;
-      right: 40px;
-      font-size: 35px;
-      cursor: pointer;
-      display: block;
-      transition: 0.4s; }
-      header .esconder-menu:hover {
-        color: white;
-        transition: 0.8s; }
-    header .mostrar-menu {
-      order: 1;
-      padding: 20px;
-      font-size: 35px;
-      cursor: pointer;
-      display: block;
-      transition: 0.4s; }
-      header .mostrar-menu:hover {
-        color: white;
-        transition: 0.8s; }
-  /*BOTONES*/
-  .boton, .botonPagina {
-    text-align: center; }
-    .boton a, .botonPagina a {
-      display: inline-block;
-      padding: 0.8em;
-      background: #afafaf;
-      margin: 10px;
-      border-radius: 20px; }
-      .boton a:hover, .botonPagina a:hover {
-        color: white;
-        transition: 0.8s; }
-    .boton:hover, .botonPagina:hover {
-      transition: 0.8s;
-      background-color: #afafaf;
-      border-radius: 20px; }
-  .botonPagina {
-    display: inline-block; }
-  /*BOTONES*/
-  /*LAS CLASES MAS EFECTIVAS Y DIVERTIDAS*/
-  .container-1 {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 10px 0; }
-    .container-1 .clases {
-      background-color: #f9d2ad;
-      border-radius: 10px; }
-      .container-1 .clases h2 {
-        display: flex;
-        text-align: center; }
-      .container-1 .clases .clases-list {
-        display: grid;
-        grid-template-columns: auto auto;
-        justify-content: space-evenly;
-        margin: 10px;
-        padding: 10px; }
-    .container-1 .clases-img {
-      text-align: center;
-      animation: backInRight;
-      animation-duration: 3s;
-      animation-delay: 2s; }
-      .container-1 .clases-img img {
-        width: 100%;
-        border-radius: 30px;
-        padding: 10px; }
-  /*FOOTER*/
-  .footer {
-    min-height: 150px;
-    background-color: gray;
-    padding: 10px; }
-    .footer .grupo_1 {
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr; }
-      .footer .grupo_1 .footer_logo {
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-        .footer .grupo_1 .footer_logo img {
-          width: 200px; }
-      .footer .grupo_1 h4 {
-        color: white;
-        margin-bottom: 25px;
-        margin-top: 25px;
-        font-size: 20px;
-        text-align: center; }
-      .footer .grupo_1 nav a:hover {
-        color: white;
-        transition: 0.8s; }
-      .footer .grupo_1 .copy {
-        display: flex;
-        flex-direction: column-reverse; }
-    .footer .footer_rrss .fotter_rrss_orden {
-      display: inline-block;
-      margin-bottom: 3px;
-      padding: 5px;
+  header .esconder-menu {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 35px;
+    cursor: pointer;
+    display: block;
+    transition: 0.4s; }
+    header .esconder-menu:hover {
+      color: white;
+      transition: 0.8s; }
+  header .mostrar-menu {
+    order: 1;
+    padding: 20px;
+    font-size: 35px;
+    cursor: pointer;
+    display: block;
+    transition: 0.4s; }
+    header .mostrar-menu:hover {
+      color: white;
+      transition: 0.8s; }
+
+/*BOTONES*/
+.boton, .botonPagina {
+  text-align: center; }
+  .boton a, .botonPagina a {
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #afafaf;
+    margin: 10px;
+    border-radius: 20px; }
+    .boton a:hover, .botonPagina a:hover {
+      color: white;
+      transition: 0.8s; }
+
+.botonPagina {
+  display: inline-block; }
+
+/*LAS CLASES MAS EFECTIVAS Y DIVERTIDAS*/
+.container-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 10px 0; }
+  .container-1 .clases {
+    background-color: #f9d2ad;
+    border-radius: 10px; }
+    .container-1 .clases h2 {
+      display: flex;
       text-align: center; }
-      .footer .footer_rrss .fotter_rrss_orden img {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 30px; }
-  /*PAGINA TIENDA*/
-  .box-prendas {
+    .container-1 .clases .clases-list {
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: space-evenly;
+      margin: 10px;
+      padding: 10px; }
+  .container-1 .clases-img {
+    text-align: center;
+    animation: backInRight;
+    animation-duration: 3s;
+    animation-delay: 2s; }
+    .container-1 .clases-img img {
+      width: 100%;
+      border-radius: 30px;
+      padding: 10px; }
+
+/*TABLA HORARIOS*/
+.tituloHorarios {
+  padding-left: 30px;
+  padding-top: 20px;
+  font-weight: 20px; }
+
+.botonHorarios {
+  display: inline-block;
+  padding-left: 25px; }
+  .botonHorarios a {
+    display: inline-block;
+    padding: 15px;
+    background: #afafaf;
+    margin: 10px;
+    border-radius: 20px; }
+    .botonHorarios a:hover {
+      color: white;
+      transition: 0.8s; }
+
+table {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: grey;
+  padding-left: 30px;
+  padding-bottom: 20px; }
+  table tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit; }
+    table tbody tr {
+      display: table-row;
+      vertical-align: inherit;
+      border-color: inherit; }
+      table tbody tr th {
+        padding: 0.2em 0.8em;
+        border: 1px solid rgba(20, 50, 90, 0.25);
+        text-align: center; }
+      table tbody tr td {
+        padding: 0.2em 0.8em;
+        border: 1px solid rgba(16, 76, 167, 0.25);
+        text-align: left; }
+
+/*FOOTER*/
+.footer {
+  min-height: 150px;
+  background-color: gray;
+  padding: 10px; }
+  .footer .grupo_1 {
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    align-items: stretch; }
-    .box-prendas .cardProduct {
+    grid-template-columns: 1fr; }
+    .footer .grupo_1 .footer_logo {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .footer .grupo_1 .footer_logo img {
+        width: 200px; }
+    .footer .grupo_1 h4 {
+      color: white;
+      margin-bottom: 25px;
+      margin-top: 25px;
+      font-size: 20px;
+      text-align: center; }
+    .footer .grupo_1 nav a:hover {
+      color: white;
+      transition: 0.8s; }
+    .footer .grupo_1 .copy {
+      display: flex;
+      flex-direction: column-reverse; }
+  .footer .footer_rrss .fotter_rrss_orden {
+    display: inline-block;
+    margin-bottom: 3px;
+    padding: 5px;
+    text-align: center; }
+    .footer .footer_rrss .fotter_rrss_orden img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px; }
+
+/*PAGINA TIENDA*/
+.box-prendas {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: stretch; }
+  .box-prendas .cardProduct {
+    border-color: gray;
+    border-style: solid;
+    /*width: map-get($map: $estilos, $key: ancho);*/
+    max-width: 355px;
+    border-width: 3px;
+    margin: 5px; }
+    .box-prendas .cardProduct .borderRounded {
+      border-radius: 10px; }
+    .box-prendas .cardProduct .cardProduct__image {
+      width: 100%; }
+    .box-prendas .cardProduct .cardProduct__description {
+      padding: 15px;
       border-color: gray;
       border-style: solid;
-      width: 100%;
-      max-width: 355px;
-      border-width: 3px;
-      margin: 5px; }
-      .box-prendas .cardProduct .borderRounded {
-        border-radius: 10px; }
-      .box-prendas .cardProduct .cardProduct__image {
-        width: 100%; }
-      .box-prendas .cardProduct .cardProduct__description {
-        padding: 15px;
-        border-color: gray;
-        border-style: solid;
-        border-width: 1px; }
-      .box-prendas .cardProduct .cardProduct__description__price {
-        margin-top: 10px; }
-      .box-prendas .cardProduct .cardProduct__description__text {
-        margin-top: 15px;
-        margin-bottom: 20px;
-        text-align: justify;
-        line-height: 25px;
-        font-size: 1.1rem;
-        font-weight: 100; }
-  /*CURSOS*/
-  .fondoCursos .fondoFachada {
-    position: relative; }
-    .fondoCursos .fondoFachada img {
-      width: 100%; }
-  .fondoCentro {
+      border-width: 1px; }
+    .box-prendas .cardProduct .cardProduct__description__price {
+      margin-top: 10px; }
+    .box-prendas .cardProduct .cardProduct__description__text {
+      margin-top: 15px;
+      margin-bottom: 20px;
+      text-align: justify;
+      line-height: 25px;
+      font-size: 1.1rem;
+      font-weight: 100; }
+
+/*CURSOS*/
+.fondoCursos .fondoFachada {
+  position: relative; }
+  .fondoCursos .fondoFachada img {
+    width: 100%; }
+
+.fondoCentro {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -120px; }
+  .fondoCentro .fondoTitulo {
     display: grid;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: -120px; }
-    .fondoCentro .fondoTitulo {
-      display: grid;
-      justify-content: center; } }
+    justify-content: center; }
+    .fondoCentro .fondoTitulo h1 {
+      color: aliceblue;
+      font-weight: 300; }
 
 /*RESPONSIVE TABLET*/
 @media screen and (min-width: 760px) {
@@ -235,6 +287,48 @@ a {
         grid-column-gap: 75px; }
         .container-1 .clases .clases-list .clases-list-item {
           border: 1px solid black; }
+  /*TABLA HORARIOS*/
+  .tituloHorarios {
+    padding-left: 30px;
+    padding-top: 20px;
+    font-weight: 20px; }
+  .botonHorarios {
+    display: inline-block;
+    padding-left: 25px; }
+    .botonHorarios a {
+      display: inline-block;
+      padding: 15px;
+      background: #afafaf;
+      margin: 10px;
+      border-radius: 20px; }
+      .botonHorarios a:hover {
+        color: white;
+        transition: 0.8s; }
+  table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+    padding-left: 30px;
+    padding-bottom: 20px; }
+    table tbody {
+      display: table-row-group;
+      vertical-align: middle;
+      border-color: inherit; }
+      table tbody tr {
+        display: table-row;
+        vertical-align: inherit;
+        border-color: inherit; }
+        table tbody tr th {
+          padding: 0.2em 0.8em;
+          border: 1px solid rgba(20, 50, 90, 0.25);
+          text-align: center; }
+        table tbody tr td {
+          padding: 0.2em 0.8em;
+          border: 1px solid rgba(16, 76, 167, 0.25);
+          text-align: left; }
   /*FOOTER*/
   .footer {
     min-height: 150px;

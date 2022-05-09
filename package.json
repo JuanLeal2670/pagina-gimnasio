@@ -1,7 +1,7 @@
 {
-  "name": "proyecto-copia-de-seguridad",
+  "name": "proyecto-equilibrium",
   "version": "1.0.0",
-  "description": "aplicando SASS ",
+  "description": "Proyecto pagina de gimnasio de nombre Equilibrium",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

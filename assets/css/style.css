@@ -131,25 +131,25 @@ header {
       padding: 10px; }
 
 /*TABLA HORARIOS*/
-.tituloHorarios {
+.horarios .tituloHorarios {
   padding-left: 30px;
   padding-top: 20px;
   font-weight: 20px; }
 
-.botonHorarios {
+.horarios .botonHorarios {
   display: inline-block;
   padding-left: 25px; }
-  .botonHorarios a {
+  .horarios .botonHorarios a {
     display: inline-block;
     padding: 15px;
     background: #afafaf;
     margin: 10px;
     border-radius: 20px; }
-    .botonHorarios a:hover {
+    .horarios .botonHorarios a:hover {
       color: white;
       transition: 0.8s; }
 
-table {
+.horarios table {
   display: table;
   border-collapse: separate;
   box-sizing: border-box;
@@ -158,19 +158,19 @@ table {
   border-color: grey;
   padding-left: 30px;
   padding-bottom: 20px; }
-  table tbody {
+  .horarios table tbody {
     display: table-row-group;
     vertical-align: middle;
     border-color: inherit; }
-    table tbody tr {
+    .horarios table tbody tr {
       display: table-row;
       vertical-align: inherit;
       border-color: inherit; }
-      table tbody tr th {
+      .horarios table tbody tr th {
         padding: 0.2em 0.8em;
         border: 1px solid rgba(20, 50, 90, 0.25);
         text-align: center; }
-      table tbody tr td {
+      .horarios table tbody tr td {
         padding: 0.2em 0.8em;
         border: 1px solid rgba(16, 76, 167, 0.25);
         text-align: left; }
@@ -288,47 +288,50 @@ table {
         .container-1 .clases .clases-list .clases-list-item {
           border: 1px solid black; }
   /*TABLA HORARIOS*/
-  .tituloHorarios {
-    padding-left: 30px;
-    padding-top: 20px;
-    font-weight: 20px; }
-  .botonHorarios {
-    display: inline-block;
-    padding-left: 25px; }
-    .botonHorarios a {
+  .flex-box {
+    display: flex;
+    flex-wrap: wrap; }
+    .flex-box .horarios .tituloHorarios {
+      padding-left: 30px;
+      padding-top: 20px;
+      font-weight: 20px; }
+    .flex-box .horarios .botonHorarios {
       display: inline-block;
-      padding: 15px;
-      background: #afafaf;
-      margin: 10px;
-      border-radius: 20px; }
-      .botonHorarios a:hover {
-        color: white;
-        transition: 0.8s; }
-  table {
-    display: table;
-    border-collapse: separate;
-    box-sizing: border-box;
-    text-indent: initial;
-    border-spacing: 2px;
-    border-color: grey;
-    padding-left: 30px;
-    padding-bottom: 20px; }
-    table tbody {
-      display: table-row-group;
-      vertical-align: middle;
-      border-color: inherit; }
-      table tbody tr {
-        display: table-row;
-        vertical-align: inherit;
+      padding-left: 25px; }
+      .flex-box .horarios .botonHorarios a {
+        display: inline-block;
+        padding: 15px;
+        background: #afafaf;
+        margin: 10px;
+        border-radius: 20px; }
+        .flex-box .horarios .botonHorarios a:hover {
+          color: white;
+          transition: 0.8s; }
+    .flex-box .horarios table {
+      display: table;
+      border-collapse: separate;
+      box-sizing: border-box;
+      text-indent: initial;
+      border-spacing: 2px;
+      border-color: grey;
+      padding-left: 30px;
+      padding-bottom: 20px; }
+      .flex-box .horarios table tbody {
+        display: table-row-group;
+        vertical-align: middle;
         border-color: inherit; }
-        table tbody tr th {
-          padding: 0.2em 0.8em;
-          border: 1px solid rgba(20, 50, 90, 0.25);
-          text-align: center; }
-        table tbody tr td {
-          padding: 0.2em 0.8em;
-          border: 1px solid rgba(16, 76, 167, 0.25);
-          text-align: left; }
+        .flex-box .horarios table tbody tr {
+          display: table-row;
+          vertical-align: inherit;
+          border-color: inherit; }
+          .flex-box .horarios table tbody tr th {
+            padding: 0.2em 0.8em;
+            border: 1px solid rgba(20, 50, 90, 0.25);
+            text-align: center; }
+          .flex-box .horarios table tbody tr td {
+            padding: 0.2em 0.8em;
+            border: 1px solid rgba(16, 76, 167, 0.25);
+            text-align: left; }
   /*FOOTER*/
   .footer {
     min-height: 150px;
